@@ -14,6 +14,10 @@ from networksecurity.utils.ml_utils.metric.classification_metric import get_clas
 import mlflow
 
 
+import dagshub
+dagshub.init(repo_owner='Nellutla123', repo_name='MLOPS-Networksecuritysystem', mlflow=True)
+
+
 from sklearn.linear_model import LogisticRegression
 from sklearn.metrics import r2_score
 
@@ -119,6 +123,8 @@ class ModelTrainer:
         
         Network_model = NetworkModel(preprocessor=preprocessor,model = best_model)
         save_object(self.model_trainer_config.trained_model_file_path,obj = NetworkModel)
+        
+        save_object("final_model/model.pkl",best_model)
         
         #model trainer artifact
         
