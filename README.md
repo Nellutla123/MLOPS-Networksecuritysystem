@@ -1,4 +1,3 @@
-Here's a well-structured and polished version of your README file for GitHub. I’ve formatted it with proper headings, bullet points, and markdown to make it clean, professional, and easy to read:
 
 ---
 
